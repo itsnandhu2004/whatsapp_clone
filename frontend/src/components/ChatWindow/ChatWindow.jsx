@@ -20,9 +20,9 @@ const formatDateDivider = (dateStr) => {
 const formatLastSeen = (dateStr) => {
   if (!dateStr) return "offline";
   const date = typeof dateStr === "string" ? parseISO(dateStr) : new Date(dateStr);
-  if (isToday(date)) return `last seen today at ${format(date, "HH:mm")}`;
-  if (isYesterday(date)) return `last seen yesterday at ${format(date, "HH:mm")}`;
-  return `last seen ${format(date, "dd/MM/yyyy")} at ${format(date, "HH:mm")}`;
+  if (isToday(date)) return `last seen today at ${format(date, "h:mm a")}`;
+  if (isYesterday(date)) return `last seen yesterday at ${format(date, "h:mm a")}`;
+  return `last seen ${format(date, "dd/MM/yyyy")} at ${format(date, "h:mm a")}`;
 };
 
 const TypingIndicator = () => (

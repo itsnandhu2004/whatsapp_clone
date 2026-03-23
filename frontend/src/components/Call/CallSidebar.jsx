@@ -7,7 +7,7 @@ import { useSocket } from "../../context/SocketContext";
 
 const formatCallTime = (dateStr) => {
   const date = typeof dateStr === "string" ? parseISO(dateStr) : new Date(dateStr);
-  if (isToday(date)) return format(date, "HH:mm");
+  if (isToday(date)) return format(date, "h:mm a");
   if (isYesterday(date)) return "Yesterday";
   return format(date, "dd/MM/yyyy");
 };

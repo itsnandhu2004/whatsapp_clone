@@ -5,7 +5,7 @@ import { useAuth } from "../../context/AuthContext";
 const formatTime = (dateStr) => {
   if (!dateStr) return "";
   const date = typeof dateStr === "string" ? parseISO(dateStr) : new Date(dateStr);
-  return format(date, "HH:mm");
+  return format(date, "h:mm a");
 };
 
 const DoubleCheckIcon = ({ read }) => (
